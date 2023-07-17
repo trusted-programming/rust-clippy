@@ -112,7 +112,7 @@ impl<'a, 'tcx> NumericFallbackVisitor<'a, 'tcx> {
                         lit.span,
                         "default numeric fallback might occur",
                         |diag| {
-                            diag.span_suggestion(lit.span, "consider adding suffix", sugg, Applicability::MaybeIncorrect);
+                            diag.span_suggestion(lit.span, "consider adding suffix", sugg, Applicability::MachineApplicable);
                         }
                     );
                 }

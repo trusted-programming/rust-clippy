@@ -445,6 +445,7 @@ pub(crate) static LINTS: &[&crate::LintInfo] = &[
     crate::mismatching_type_param_order::MISMATCHING_TYPE_PARAM_ORDER_INFO,
     crate::missing_assert_message::MISSING_ASSERT_MESSAGE_INFO,
     crate::missing_const_for_fn::MISSING_CONST_FOR_FN_INFO,
+    crate::missing_debug_implementations::MISSING_DEBUG_IMPLEMENTATIONS_INFO,
     crate::missing_doc::MISSING_DOCS_IN_PRIVATE_ITEMS_INFO,
     crate::missing_enforced_import_rename::MISSING_ENFORCED_IMPORT_RENAMES_INFO,
     crate::missing_fields_in_debug::MISSING_FIELDS_IN_DEBUG_INFO,

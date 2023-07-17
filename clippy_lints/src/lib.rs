@@ -206,6 +206,7 @@ mod misc_early;
 mod mismatching_type_param_order;
 mod missing_assert_message;
 mod missing_const_for_fn;
+mod missing_debug_implementations;
 mod missing_doc;
 mod missing_enforced_import_rename;
 mod missing_fields_in_debug;
@@ -1078,6 +1079,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
     store.register_early_pass(|| Box::new(visibility::Visibility));
     store.register_late_pass(move |_| Box::new(tuple_array_conversions::TupleArrayConversions { msrv: msrv() }));
     store.register_late_pass(|_| Box::new(manual_float_methods::ManualFloatMethods));
+    store.register_late_pass(|_| Box::new(missing_debug_implementations::MissingDebugImplementations::default()));
     // add lints here, do not remove this comment, it's used in `new_lint`
 }
 
